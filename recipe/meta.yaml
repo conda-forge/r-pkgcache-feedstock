@@ -1,4 +1,4 @@
-{% set version = "1.0.6" %}
+{% set version = '1.0.6' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -27,38 +27,34 @@ requirements:
     - r-base
     - r-r6
     - r-assertthat
-    - r-cli
-    - r-cliapp
-    - r-crayon
+    - r-callr >=2.0.4.9000
+    - r-cli >=2.0.0
     - r-curl >=3.2
     - r-digest
     - r-filelock
     - r-glue
     - r-prettyunits
+    - r-processx >=3.3.0.9001
     - r-rappdirs
-    - r-rematch2
     - r-rlang
     - r-tibble
     - r-uuid
-    - r-withr
   run:
     - r-base
     - r-r6
     - r-assertthat
-    - r-cli
-    - r-cliapp
-    - r-crayon
+    - r-callr >=2.0.4.9000
+    - r-cli >=2.0.0
     - r-curl >=3.2
     - r-digest
     - r-filelock
     - r-glue
     - r-prettyunits
+    - r-processx >=3.3.0.9001
     - r-rappdirs
-    - r-rematch2
     - r-rlang
     - r-tibble
     - r-uuid
-    - r-withr
 
 test:
   commands:
@@ -68,10 +64,12 @@ test:
 about:
   home: https://github.com/r-lib/pkgcache#readme
   license: MIT
-  license_file: LICENSE
   summary: Metadata and package cache for CRAN-like repositories. This is a utility package to
     be used by package management tools that want to take advantage of caching.
   license_family: MIT
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - LICENSE
 
 extra:
   recipe-maintainers:
@@ -80,21 +78,21 @@ extra:
 
 # Package: pkgcache
 # Title: Cache 'CRAN'-Like Metadata and R Packages
-# Version: 1.0.5
-# Authors@R:  person(given = "Gabor", family = "Csardi", role = c("aut", "cre"), email = "csardi.gabor@gmail.com")
+# Version: 1.0.6
+# Authors@R: person(given = "Gabor", family = "Csardi", role = c("aut", "cre"), email = "csardi.gabor@gmail.com")
 # Description: Metadata and package cache for CRAN-like repositories. This is a utility package to be used by package management tools that want to take advantage of caching.
 # License: MIT + file LICENSE
 # Encoding: UTF-8
 # LazyData: true
 # URL: https://github.com/r-lib/pkgcache#readme
 # BugReports: https://github.com/r-lib/pkgcache/issues
-# Imports: assertthat, cli, cliapp, curl (>= 3.2), crayon, digest, filelock, glue, prettyunits, R6, rappdirs, rematch2, rlang, tibble, tools, utils, uuid, withr
-# Suggests: callr, covr, debugme, desc, fs, jsonlite, mockery, pingr, rprojroot, testthat,
+# Imports: assertthat, callr (>= 2.0.4.9000), cli (>= 2.0.0), curl (>= 3.2), digest, filelock, glue, prettyunits, R6, processx (>= 3.3.0.9001), rappdirs, rlang, tibble, tools, utils, uuid
+# Suggests: covr, debugme, desc, fs, jsonlite, mockery, pingr, rprojroot, testthat, withr
 # Depends: R (>= 3.1)
-# RoxygenNote: 6.1.1
+# RoxygenNote: 7.0.2
 # NeedsCompilation: no
-# Packaged: 2019-05-31 10:21:40 UTC; gaborcsardi
+# Packaged: 2020-01-30 15:10:20 UTC; gaborcsardi
 # Author: Gabor Csardi [aut, cre]
 # Maintainer: Gabor Csardi <csardi.gabor@gmail.com>
 # Repository: CRAN
-# Date/Publication: 2019-05-31 11:20:07 UTC
+# Date/Publication: 2020-01-30 15:40:02 UTC
