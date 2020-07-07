@@ -5,7 +5,7 @@ Home: https://github.com/r-lib/pkgcache#readme
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Metadata and package cache for CRAN-like repositories. This is a utility package to be used by package management tools that want to take advantage of caching.
 
