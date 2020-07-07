@@ -1,4 +1,4 @@
-{% set version = "1.0.7" %}
+{% set version = "1.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pkgcache_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pkgcache/pkgcache_{{ version }}.tar.gz
-  sha256: 97e9a8b14a299a7ac3ed99b30880f6f9242aa8fdcfe9acf506a64f5920d772a9
+  sha256: 6b3a2312a373a06b11467221eb9930d6ce58d56f6ab9bc27df8392ee965819bb
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -64,8 +64,7 @@ test:
 about:
   home: https://github.com/r-lib/pkgcache#readme
   license: MIT
-  summary: Metadata and package cache for CRAN-like repositories. This is a utility package to be used by package management tools that want to take advantage of
-    caching.
+  summary: Metadata and package cache for CRAN-like repositories. This is a utility package to be used by package management tools that want to take advantage of caching.
   license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
