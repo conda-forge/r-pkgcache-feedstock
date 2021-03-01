@@ -33,6 +33,7 @@ requirements:
     - r-digest
     - r-filelock
     - r-glue
+    - r-jsonlite
     - r-prettyunits
     - r-processx >=3.3.0.9001
     - r-rappdirs
@@ -49,6 +50,7 @@ requirements:
     - r-digest
     - r-filelock
     - r-glue
+    - r-jsonlite
     - r-prettyunits
     - r-processx >=3.3.0.9001
     - r-rappdirs
