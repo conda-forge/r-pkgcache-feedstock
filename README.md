@@ -1,13 +1,15 @@
 About r-pkgcache
 ================
 
-Home: https://github.com/r-lib/pkgcache#readme
+Home: https://r-lib.github.io/pkgcache/
 
 Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-pkgcache-feedstock/blob/main/LICENSE.txt)
 
 Summary: Metadata and package cache for CRAN-like repositories. This is a utility package to be used by package management tools that want to take advantage of caching.
+
+Development: https://github.com/r-lib/pkgcache
 
 Current build status
 ====================

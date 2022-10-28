@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -25,38 +25,26 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-r6
-    - r-assertthat
     - r-callr >=2.0.4.9000
-    - r-cli >=2.0.0
+    - r-cli >=3.2.0
     - r-curl >=3.2
-    - r-digest
     - r-filelock
-    - r-glue
     - r-jsonlite
     - r-prettyunits
     - r-processx >=3.3.0.9001
+    - r-r6
     - r-rappdirs
-    - r-rlang
-    - r-tibble
-    - r-uuid
   run:
     - r-base
-    - r-r6
-    - r-assertthat
     - r-callr >=2.0.4.9000
-    - r-cli >=2.0.0
+    - r-cli >=3.2.0
     - r-curl >=3.2
-    - r-digest
     - r-filelock
-    - r-glue
     - r-jsonlite
     - r-prettyunits
     - r-processx >=3.3.0.9001
+    - r-r6
     - r-rappdirs
-    - r-rlang
-    - r-tibble
-    - r-uuid
 
 test:
   commands:
@@ -64,7 +52,8 @@ test:
     - "\"%R%\" -e \"library('pkgcache')\""  # [win]
 
 about:
-  home: https://github.com/r-lib/pkgcache#readme
+  home: https://r-lib.github.io/pkgcache/
+  dev_url: https://github.com/r-lib/pkgcache
   license: MIT
   summary: Metadata and package cache for CRAN-like repositories. This is a utility package to be used by package management tools that want to take advantage of caching.
   license_family: MIT
@@ -76,24 +65,3 @@ extra:
   recipe-maintainers:
     - conda-forge/r
     - xhochy
-
-# Package: pkgcache
-# Title: Cache 'CRAN'-Like Metadata and R Packages
-# Version: 1.0.6
-# Authors@R: person(given = "Gabor", family = "Csardi", role = c("aut", "cre"), email = "csardi.gabor@gmail.com")
-# Description: Metadata and package cache for CRAN-like repositories. This is a utility package to be used by package management tools that want to take advantage of caching.
-# License: MIT + file LICENSE
-# Encoding: UTF-8
-# LazyData: true
-# URL: https://github.com/r-lib/pkgcache#readme
-# BugReports: https://github.com/r-lib/pkgcache/issues
-# Imports: assertthat, callr (>= 2.0.4.9000), cli (>= 2.0.0), curl (>= 3.2), digest, filelock, glue, prettyunits, R6, processx (>= 3.3.0.9001), rappdirs, rlang, tibble, tools, utils, uuid
-# Suggests: covr, debugme, desc, fs, jsonlite, mockery, pingr, rprojroot, testthat, withr
-# Depends: R (>= 3.1)
-# RoxygenNote: 7.0.2
-# NeedsCompilation: no
-# Packaged: 2020-01-30 15:10:20 UTC; gaborcsardi
-# Author: Gabor Csardi [aut, cre]
-# Maintainer: Gabor Csardi <csardi.gabor@gmail.com>
-# Repository: CRAN
-# Date/Publication: 2020-01-30 15:40:02 UTC
